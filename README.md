@@ -1,4 +1,4 @@
-# Atividade 2 - Unidade 1 (POO) :bookmark_tabs:
+# Atividade 3 - Unidade 1 (POO) :bookmark_tabs:
 
 Resolução das questões da atividade 3 da primeira unidade da disciplica de Programação Orientada à Objetos I
 
