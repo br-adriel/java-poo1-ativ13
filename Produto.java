@@ -1,33 +1,30 @@
 
 /**
- * Escreva uma descrição da classe Produto aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Adriel Faria dos Santos
+ * @version 18/05/2022
  */
-public class Produto
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+public class Produto {
+    private String descricao;
+    private double preco;
 
-    /**
-     * Construtor para objetos da classe Produto
-     */
-    public Produto()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+    public Produto(String descricao, double preco) {
+        this.descricao = descricao;
+        this.preco = preco;
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 }
