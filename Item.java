@@ -1,33 +1,34 @@
 
 /**
- * Escreva uma descrição da classe Item aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Adriel Faria dos Santos
+ * @version 18/05/2022
  */
-public class Item
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+public class Item {
+    private int quantidade;
+    private Produto produto;
 
-    /**
-     * Construtor para objetos da classe Item
-     */
-    public Item()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+    public Item(int quantidade, Produto produto) {
+        this.quantidade = quantidade;
+        this.produto = produto;
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+    
+    public double total() {
+        return this.quantidade * this.produto.getPreco();
     }
 }
