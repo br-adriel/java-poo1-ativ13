@@ -1,33 +1,69 @@
+import java.util.ArrayList;
 
 /**
- * Escreva uma descrição da classe Mercado aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Adriel Faria dos Santos
+ * @version 18/05/2022
  */
-public class Mercado
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+public class Mercado {
 
-    /**
-     * Construtor para objetos da classe Mercado
-     */
-    public Mercado()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+    private String nome;
+    private ArrayList<Venda> vendas;
+
+    public Mercado(String nome, ArrayList<Venda> vendas) {
+        this.nome = nome;
+        this.vendas = vendas;
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    public Mercado(String nome) {
+        this.nome = nome;
+        this.vendas = new ArrayList<Venda>();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public ArrayList<Venda> getVendas() {
+        return vendas;
+    }
+
+    public void setVendas(ArrayList<Venda> vendas) {
+        this.vendas = vendas;
+    }
+
+    public void addVenda(Venda venda) {
+        this.vendas.add(venda);
+    }
+    
+    public double totalVendas() {
+        double total = 0;
+        for (Venda v : this.vendas) {
+            total += v.total();
+        }
+        return total;
+    }
+    
+    public double totalVendasMes(String mes) {
+        double total = 0;
+        for (Venda venda : this.vendas) {
+            if (venda.getDataString().contains("/"+ mes +"/")) {
+                total += venda.total();
+            }
+        }
+        return total;
+    }
+    
+    public ArrayList<Venda> vendasMes(String mes) {
+        ArrayList<Venda> vendas = new ArrayList<Venda>();
+        for (Venda venda : this.vendas) {
+            if (venda.getDataString().contains("/"+ mes +"/")) {
+                vendas.add(venda);
+            }
+        }
+        return vendas;
     }
 }
