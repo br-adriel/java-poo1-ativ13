@@ -40,11 +40,20 @@ public class Rede {
         this.mercados.add(m);
     }
 
-    public void totalVendas() {
+    public double totalVendas() {
         double total = 0;
         for (Mercado m : this.mercados) {
             total += m.totalVendas();
         }
+        return total;
+    }
+    
+    public double totalVendasMes(String mes) {
+        double total = 0;
+        for (Mercado mercado : this.mercados) {
+            total += mercado.totalVendasMes(mes);
+        }
+        return total;
     }
     
     public ArrayList<Venda> vendas() {
